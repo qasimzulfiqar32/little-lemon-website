@@ -1,0 +1,124 @@
+/*--------------------------Booking Heading-----------------------------------------------------------------*/
+.intro {
+  background-image: linear-gradient(#001a10, rgba(0, 0, 0, 0.5)),
+    url("../images/restaurant.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 60%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.textalign {
+  padding-right: 20%;
+  padding-left: 20%;
+  font-size: 18pt;
+}
+.heading {
+  padding-top: 1em;
+  text-align: center;
+  color: #f4ce14;
+}
+.desc {
+  margin: 0;
+  padding: 2vh;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .textalign {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+  .heading {
+    padding-top: 1em;
+    text-align: center;
+    color: #f4ce14;
+  }
+}
+@media (max-width: 700px) {
+  .textalign {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+  .heading {
+    padding: 0.5em 0;
+    text-align: center;
+    color: #f4ce14;
+  }
+  .desc {
+    display: none;
+  }
+}
+/*--------------------------Booking Form-------------------------------------------------------------------*/
+.section {
+  padding-right: 20%;
+  padding-left: 20%;
+  padding-bottom: 2%;
+  font-size: 18pt;
+  background-color: #edefee;
+}
+.form_container {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+label {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.col_25 {
+  float: left;
+  width: 40%;
+  margin-top: 6px;
+}
+.col_75 {
+  float: left;
+  width: 60%;
+  margin-top: 6px;
+}
+
+input,
+select {
+  font-size: 16pt;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  width: 30%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+button {
+  font-weight: 600;
+  font-size: 18pt;
+  padding: 20px 20px;
+  background-color: #f4ce14;
+  color: black;
+  border-radius: 8px;
+  border-style: none;
+  cursor: pointer;
+  margin-top: 10px;
+  float: right;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: 40px;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+  button {
+    width: 100%;
+    float: none;
+  }
+}

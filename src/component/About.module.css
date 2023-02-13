@@ -1,0 +1,135 @@
+.section {
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+.divide_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* This will align the items vertically */
+  margin: 0em 0em;
+  width: 100%; /* This will make the .divide_flex take up the full width of its parent element */
+  overflow: visible;
+}
+
+.description {
+  font-family: "Karla", sans-serif;
+  font-size: 16pt;
+  margin-right: 1em;
+  text-align: justify;
+}
+
+.img_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* This will align the items vertically */
+  margin: 0em 0em;
+}
+
+.img_1 {
+  object-fit: cover;
+  width: 15vw;
+  height: auto;
+  max-height: 65vh;
+  border-color: black;
+  border-style: solid;
+  transform: translate(80px, 80px);
+  z-index: 0;
+  object-position: 60% 100%;
+}
+
+.img_2 {
+  object-fit: cover;
+  width: 15vw;
+  height: auto;
+  max-height: 65vh;
+  border-color: black;
+  border-style: solid;
+  z-index: 1;
+  object-position: 80% 100%;
+}
+
+/* Media queries--------------------------------------------------------------------------*/
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .section {
+    margin-right: 4%;
+    margin-left: 4%;
+    margin-top: 5%;
+  }
+  .divide_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* This will align the items vertically */
+    margin: 0em 0em;
+    width: 100%; /* This will make the .divide_flex take up the full width of its parent element */
+    overflow: visible;
+  }
+
+  .img_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* This will align the items vertically */
+    margin: 0em 0em;
+    margin-bottom: 10em;
+  }
+
+  .img_1 {
+    width: 25vw;
+    height: auto;
+    transform: translate(80px, 120px);
+    object-position: 50% 100%;
+  }
+
+  .img_2 {
+    width: 25vw;
+    height: auto;
+    object-position: 65% 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .section {
+    margin-right: 4%;
+    margin-left: 4%;
+    margin-top: 5%;
+  }
+  .divide_flex {
+    display: block;
+    flex-direction: row;
+    justify-content: space-between; /* This will align the items vertically */
+    margin: 0em 0em;
+    width: 100%; /* This will make the .divide_flex take up the full width of its parent element */
+    overflow: visible;
+  }
+
+  .img_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /* This will align the items vertically */
+    margin: 0em 0em;
+    margin-bottom: 5em;
+  }
+
+  .img_1 {
+    object-fit: cover;
+    width: 45vw;
+    height: 50vh;
+    border-color: black;
+    border-style: solid;
+    transform: translate(20px, 50px);
+    z-index: 0;
+    object-position: 50% 100%;
+  }
+
+  .img_2 {
+    object-fit: cover;
+    width: 45vw;
+    height: 50vh;
+    border-color: black;
+    border-style: solid;
+    transform: translate(-20px, 0px);
+    z-index: 1;
+    object-position: 65% 100%;
+  }
+}
