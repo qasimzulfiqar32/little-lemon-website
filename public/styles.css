@@ -1,0 +1,217 @@
+body {
+  font-family: "Karla", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Markazi";
+}
+
+h1 {
+  font-size: 64pt;
+  font-weight: medium;
+  margin: 0;
+}
+
+h2 {
+  font-size: 40pt;
+  font-weight: medium;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Karla", sans-serif;
+  font-size: 18pt;
+  margin: 0;
+}
+
+h4 {
+  font-family: "Karla", sans-serif;
+  font-size: 16pt;
+}
+
+.grid-container {
+  display: grid;
+  /* grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1.3fr 0.85fr 0.85fr; */
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "reservation"
+    "specials"
+    "ratings"
+    "about";
+  grid-auto-flow: column;
+}
+
+/* Media queries--------------------------------------------------------------------------*/
+
+@media (max-width: 700px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "reservation"
+      "specials"
+      "ratings"
+      "about";
+    grid-auto-flow: row;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "reservation"
+      "specials"
+      "ratings"
+      "about";
+    grid-auto-flow: row;
+  }
+}
+
+.reservation {
+  grid-area: reservation;
+  background-color: #495e57;
+  color: #edefee;
+}
+
+.specials {
+  grid-area: specials;
+  color: #333333;
+}
+
+.ratings {
+  grid-area: ratings;
+  background-color: #fbdabb;
+  color: #333333;
+}
+
+.about {
+  grid-area: about;
+  color: #333333;
+  margin-bottom: 10vh;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  /* padding-left: 2%; */
+}
+@media (min-width: 861px) {
+  nav ul li {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 1em;
+    max-width: 100%;
+  }
+}
+@media (min-width: 701px) and (max-width: 860px) {
+  nav ul li {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0.5em;
+    max-width: 100%;
+  }
+}
+
+nav ul li:first-child {
+  padding-left: 0em;
+}
+
+nav ul li:last-child {
+  padding-right: 0;
+}
+
+a {
+  text-decoration: none !important;
+  color: #495e57 !important;
+}
+.menu_icon {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .menu_icon {
+    display: block;
+    cursor: pointer;
+    padding: 20px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: none;
+  }
+
+  nav ul li {
+    font-weight: bold;
+    font-size: 20px;
+    height: calc(100% / 6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid;
+  }
+
+  nav ul li:first-child {
+    padding-left: 0;
+  }
+
+  nav ul li:last-child {
+    padding-right: 0;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #ffffff !important;
+  }
+
+  .navbar_overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar_open {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+    position: fixed;
+    right: 0;
+    background-color: #495e57;
+    z-index: 10;
+    transform: translateX(0);
+  }
+
+  .navbar-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }
+}

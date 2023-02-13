@@ -1,0 +1,54 @@
+.section {
+  padding: 2% 20% 10% 20%;
+}
+
+.heading {
+  text-align: center;
+  justify-content: center;
+  color: green;
+  padding-bottom: 0.5em;
+}
+
+.details {
+  font-size: 18pt;
+}
+p {
+  font-size: 18pt;
+  text-align: justify;
+}
+
+.details_data {
+  font-weight: 900;
+  color: rgb(0, 73, 0);
+}
+.booking_detail {
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 0% 4% 4% 4%;
+  }
+
+  .heading {
+    text-align: center;
+    justify-content: center;
+    color: green;
+    padding-bottom: 0em;
+  }
+
+  .details {
+    font-size: 18pt;
+  }
+  p {
+    text-align: justify;
+  }
+
+  .details_data {
+    font-weight: 900;
+    color: rgb(0, 73, 0);
+  }
+  .booking_detail {
+    font-weight: 600;
+  }
+}
